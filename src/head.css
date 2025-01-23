@@ -1,0 +1,45 @@
+.matrix-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    z-index: 2; /* Ensure it stays above the rain effect */
+}
+
+.matrix-text {
+    color: white;
+    font-size: 80px;
+    font-family: monospace;
+    position: relative;
+    text-shadow: 0 0 10px #7CB9E8, 0 0 20px #7CB9E8, 0 0 30px #7CB9E8;
+    z-index: 2; /* Ensure it stays above the rain effect */
+}
+
+.matrix-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: glitch 2s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-2px, -2px);
+    color: #7CB9E8;
+    text-shadow: 0 0 5px #7CB9E8, 0 0 15px #7CB9E8;
+}
+@keyframes glitch {
+    0%, 100% {
+        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        transform: translate(0);
+    }
+    33% {
+        clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+        transform: translate(-5px, -5px);
+    }
+    66% {
+        clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
+        transform: translate(5px, 5px);
+    }
+}
