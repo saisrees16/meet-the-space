@@ -13,7 +13,7 @@ function Navbar(){
                 <a href="#">Contact</a>
                 <a href="#">About</a>
                 <select>
-                    <option>Select station:</option>
+                    <option>Select station</option>
                     <option><a href="">SpaceX</a></option>
                     <option><a href="">Nasa</a></option>
                     <option><a href="">Isro</a></option>

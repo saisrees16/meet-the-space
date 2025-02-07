@@ -1,31 +1,11 @@
 body{
-  background-image: url('./assets/background.jpg');
+  background-image: url('https://ready.so/images/Sand-Texture.webp');
   color: #fff;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: system-ui;
+  font-family: GT Walsheim, sans-serif;
   margin: 0;
   padding: 0;
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 7px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: black;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #7CB9E8;
-  border-radius: 10px;
-  transition: 2s ease;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #318CE7;
+  display: none;
 }
