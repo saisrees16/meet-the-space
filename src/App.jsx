@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Navbar from "./Navbar.jsx";
 import Home from "./Home.jsx";
 import Arpage from "./Arpage.jsx";
+import Kids from "./Kids.jsx";
+import Newshub from "./Newshub.jsx";
 
 function App() {
     return (
@@ -21,6 +23,8 @@ function Layout() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Arpage" element={<Arpage />} />
+                <Route path="/Newshub" element={<Newshub />} />
+                <Route path="/Kids" element={<Kids />} />
             </Routes>
         </>
     );

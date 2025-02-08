@@ -21,14 +21,15 @@ function Ar() {
                     onLoad={() => setLoading(false)}
                     className={`iframe-view ${loading ? "hidden" : "fade-in"}`}
                 />
-                <figcaption>Visit the space at your locality</figcaption>
             </figure>
-            <button className="learn-more" onClick={handleClick}>
-                <span className="circle">
-                    <span className="icon arrow"></span>
-                </span>
-                <span className="button-text">Explore</span>
-            </button>
+            <div className="button-container">
+                <button className="learn-more" onClick={handleClick}>
+                    <span className="circle">
+                        <span className="icon arrow"></span>
+                    </span>
+                    <span className="button-text">Feel it</span>
+                </button>
+            </div>
         </div>
     );
 }

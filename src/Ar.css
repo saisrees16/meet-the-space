@@ -7,9 +7,9 @@
     border-radius: 15px;
     padding: 20px;
     border: 1.5px solid black;
-    width: 50%;
+    width: 75%;
     margin: 20px auto;
-    max-width: 500px;
+    max-width: 900px;
 }
 
 /* Wrapper for Animation */
@@ -36,7 +36,7 @@
 
 /* Iframe View */
 .iframe-view {
-    width: 80%;
+    width: 100%;
     height: 300px;
     border: none;
     transition: transform 0.3s ease-in-out;

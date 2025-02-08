@@ -8,25 +8,17 @@ function Navbar() {
     return (
         <div className="navbar">
             <div className="logo">
-                <figure>
-                    <img src="https://placehold.co/70x40" alt="logo" />
-                    <figcaption>Meet the Space</figcaption>
-                </figure>
+                <p>Akasha Milan</p>
             </div>
             <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
                 {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
             <nav className={menuOpen ? "nav-links open" : "nav-links"}>
-                <a href="#">Home</a>
-                <a href="#">News Hub</a>
-                <a href="#">Colleges</a>
-                <select>
-                    <option>Select station</option>
-                    <option>SpaceX</option>
-                    <option>NASA</option>
-                    <option>ISRO</option>
-                </select>
-                <a href="#">Kids</a>
+                <a href="/">Home</a>
+                <a href="/Newshub">News Hub</a>
+                <a href="#">Careers</a>
+                <a href="#">Space Stations</a>
+                <a href="/Kids">Kids</a>
             </nav>
         </div>
     );

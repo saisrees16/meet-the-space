@@ -13,6 +13,17 @@
     transition: all 0.4s ease-in-out;
 }
 
+.logo {
+    font-size: 24px;
+    padding: 10px 0 0 20px  ;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: "Audiowide", cursive;
+    color: #191970; /* Pure white text */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+
 /* Mobile Menu Toggle Button */
 .menu-toggle {
     display: none;
