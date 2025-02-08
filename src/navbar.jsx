@@ -16,8 +16,8 @@ function Navbar() {
             <nav className={menuOpen ? "nav-links open" : "nav-links"}>
                 <a href="/">Home</a>
                 <a href="/Newshub">News Hub</a>
-                <a href="#">Careers</a>
-                <a href="#">Space Stations</a>
+                <a href="/">Careers</a>
+                <a href="/">Space Stations</a>
                 <a href="/Kids">Kids</a>
             </nav>
         </div>

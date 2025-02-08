@@ -7,7 +7,7 @@ import Newshub from "./Newshub.jsx";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/meet-the-space">
             <Layout />
         </Router>
     );
@@ -15,7 +15,7 @@ function App() {
 
 function Layout() {
     const location = useLocation();
-    const hideNavbarRoutes = ["/Arpage"]; // Add routes where Navbar should be hidden
+    const hideNavbarRoutes = ["/Arpage"]; // Routes where Navbar should be hidden
 
     return (
         <>
