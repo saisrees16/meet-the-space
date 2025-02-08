@@ -1,11 +1,10 @@
 .navbar {
     background-image: url("https://ready.so/images/Sand-Texture.webp");
     color: black;
-    padding: 0 30px 0 0;
+    padding: 10px 20px 0 0;
     display: flex;
     position: sticky;
     top: 0;
-    overflow: hidden;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -14,14 +13,24 @@
     transition: all 0.4s ease-in-out;
 }
 
-/* Add a slight shadow effect when scrolling */
-.navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 24px;
 }
 
-.navbar a {
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a,
+.nav-links select {
     color: black;
     text-decoration: none;
     font-size: 20px;
@@ -32,8 +41,8 @@
     position: relative;
 }
 
-/* Modern hover effect */
-.navbar a::before {
+/* Modern hover effect (kept from your old CSS) */
+.nav-links a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -45,17 +54,17 @@
     transition: transform 0.4s ease-in-out;
 }
 
-.navbar a:hover::before {
+.nav-links a:hover::before {
     transform: scaleX(1);
 }
 
-.navbar a:hover {
+.nav-links a:hover {
     text-decoration: none;
     transform: translateY(-2px);
 }
 
-/* Animation for select dropdown */
-.navbar select {
+/* Dropdown Styling */
+.nav-links select {
     padding: 10px;
     border-radius: 10px;
     border: none;
@@ -67,13 +76,13 @@
 }
 
 /* Glow effect on select focus */
-.navbar select:focus {
+.nav-links select:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Dropdown options animation */
-.navbar option {
+/* Dropdown Options */
+.nav-links option {
     font-size: 14px;
     font-weight: bold;
     padding: 10px;
@@ -85,8 +94,8 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Reveal options when dropdown is clicked */
-.navbar select:focus option {
+/* Reveal dropdown options when focused */
+.nav-links select:focus option {
     opacity: 1;
     transform: translateY(0);
 }
@@ -105,4 +114,35 @@
 
 .navbar {
     animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a,
+    .nav-links select {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+    }
 }

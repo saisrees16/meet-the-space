@@ -1,3 +1,4 @@
+/* Main Container */
 .ar {
     text-align: center;
     animation: slide-in 1s ease-in-out;
@@ -7,16 +8,20 @@
     padding: 20px;
     border: 1.5px solid black;
     width: 50%;
-    margin: auto;
-    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 500px;
 }
 
+/* Wrapper for Animation */
 .animated-container {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    width: 100%;
+    max-width: 500px;
 }
 
+/* Loader Styling */
 .loader {
     position: absolute;
     top: 50%;
@@ -26,28 +31,34 @@
     color: white;
     padding: 10px;
     border-radius: 5px;
+    font-size: 14px;
 }
 
+/* Iframe View */
 .iframe-view {
-    width: 400px;
+    width: 80%;
     height: 300px;
     border: none;
     transition: transform 0.3s ease-in-out;
     border-radius: 10px;
 }
 
+/* Hidden State */
 .iframe-view.hidden {
     display: none;
 }
 
+/* Fade-in Animation */
 .iframe-view.fade-in {
     animation: fadeIn 1s ease-in;
 }
 
+/* Hover Effect */
 .animated-container:hover .iframe-view {
     transform: scale(1.05);
 }
 
+/* Slide-in Animation */
 @keyframes slide-in {
     from {
         opacity: 0;
@@ -59,11 +70,45 @@
     }
 }
 
+/* Fade-in Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .ar {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .animated-container {
+        width: 100%;
+    }
+
+    .iframe-view {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ar {
+        width: 90%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .iframe-view {
+        height: 200px;
+    }
+
+    .loader {
+        font-size: 12px;
+        padding: 8px;
     }
 }

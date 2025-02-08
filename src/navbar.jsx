@@ -1,6 +1,11 @@
-import './navbar.css';
-function Navbar(){
-    return(
+import { useState } from "react";
+import "./navbar.css";
+import { FiMenu, FiX } from "react-icons/fi";
+
+function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    return (
         <div className="navbar">
             <div className="logo">
                 <figure>
@@ -8,20 +13,23 @@ function Navbar(){
                     <figcaption>Meet the Space</figcaption>
                 </figure>
             </div>
-            <nav>
+            <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+            <nav className={menuOpen ? "nav-links open" : "nav-links"}>
                 <a href="#">Home</a>
-                <a href="#">Contact</a>
-                <a href="#">About</a>
+                <a href="#">News Hub</a>
+                <a href="#">Colleges</a>
                 <select>
                     <option>Select station</option>
-                    <option><a href="">SpaceX</a></option>
-                    <option><a href="">Nasa</a></option>
-                    <option><a href="">Isro</a></option>
+                    <option>SpaceX</option>
+                    <option>NASA</option>
+                    <option>ISRO</option>
                 </select>
-                <a href="#">Login</a>
+                <a href="#">Kids</a>
             </nav>
         </div>
-    )
+    );
 }
 
 export default Navbar;

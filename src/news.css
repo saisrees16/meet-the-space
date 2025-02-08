@@ -1,0 +1,127 @@
+.news-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 75%;
+}
+
+.news-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for cards */
+.news-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Card */
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+}
+
+/* Card details */
+.card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+}
+
+/* Card button */
+.card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+/* Text styling */
+.text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.text-body {
+    color: rgb(134, 134, 134);
+}
+
+/* Hover Effects */
+.card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .news-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .news-title {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        width: 160px;
+        height: 220px;
+    }
+
+    .card-button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-title {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 140px;
+        height: 200px;
+    }
+
+    .text-title {
+        font-size: 1.2rem;
+    }
+
+    .text-body {
+        font-size: 0.9rem;
+    }
+
+    .card-button {
+        font-size: 0.8rem;
+    }
+}
