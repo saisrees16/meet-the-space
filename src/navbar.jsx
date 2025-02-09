@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./navbar.css";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,11 +15,11 @@ function Navbar() {
                 {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
             <nav className={menuOpen ? "nav-links open" : "nav-links"}>
-                <a href="/">Home</a>
-                <a href="/Newshub">News Hub</a>
-                <a href="/">Careers</a>
-                <a href="/">Space Stations</a>
-                <a href="/Kids">Kids</a>
+                <Link to="/">Home</Link>
+                <Link to="/Newshub">News Hub</Link>
+                <Link to="/">Careers</Link>
+                <Link to="/">Space Stations</Link>
+                <Link to="/Kids">Kids</Link>
             </nav>
         </div>
     );

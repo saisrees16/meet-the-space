@@ -16,7 +16,7 @@ function Ar() {
             <figure className="animated-container">
                 {loading && <div className="loader">Loading...</div>}
                 <iframe
-                    src="/Arpage"
+                    src="/meet-the-space/Arpage"
                     title="space-view"
                     onLoad={() => setLoading(false)}
                     className={`iframe-view ${loading ? "hidden" : "fade-in"}`}

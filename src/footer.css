@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
-    height: 200px;
+    height: 300px;
     margin: auto;
     gap: 30px;
 }
@@ -26,7 +26,7 @@
 .footer-logo {
     font-size: 50px;
     font-weight: bold;
-    color: #f4b400;
+    color: #89CFF0;
 }
 
 .footer-about h2 {
@@ -51,7 +51,7 @@
 .footer-links h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #f4b400;
+    color: #89CFF0;
 }
 
 .footer-links ul {
@@ -71,7 +71,7 @@
 }
 
 .footer-links ul li a:hover {
-    color: #f4b400;
+    color: #89CFF0;
     text-decoration: underline;
 }
 
@@ -85,7 +85,7 @@
 .footer-newsletter h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #f4b400;
+    color: #89CFF0;
 }
 
 .footer-newsletter p {
@@ -112,12 +112,12 @@
 }
 
 .footer-newsletter input:focus {
-    border-color: #f4b400;
+    border-color: #89CFF0;
     background: #1a1a1a;
 }
 
 .footer-newsletter button {
-    background: #f4b400;
+    background: #89CFF0;
     color: #000;
     border: none;
     padding: 12px 18px;
