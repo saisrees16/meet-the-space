@@ -4,6 +4,7 @@ import Home from "./Home.jsx";
 import Arpage from "./Arpage.jsx";
 import Kids from "./Kids.jsx";
 import Newshub from "./Newshub.jsx";
+import Jigsaw from "./Jigsaw.jsx";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function Layout() {
                 <Route path="/Arpage" element={<Arpage />} />
                 <Route path="/Newshub" element={<Newshub />} />
                 <Route path="/Kids" element={<Kids />} />
+                <Route path="/Jigsaw" element={<Jigsaw />} />
             </Routes>
         </>
     );
