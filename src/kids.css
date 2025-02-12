@@ -24,7 +24,7 @@
     font-weight: bold;
     color: #ffd700;
     text-shadow: 0 0 10px #ffd700;
-    animation: glow 2s infinite alternate;
+    animation: glow 0.5s infinite alternate;
     margin-bottom: 1.5rem;
 }
 
@@ -58,7 +58,7 @@
     max-width: 32rem;
     line-height: 1.6;
     opacity: 0;
-    animation: fadeIn 2s forwards 1.5s;
+    animation: fadeIn 0.3s forwards 1.5s;
     margin: 1rem auto;
 }
 /* Fun Learning Section */
