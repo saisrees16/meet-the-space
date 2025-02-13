@@ -6,6 +6,34 @@
     padding: 20px;
     border-radius: 10px;
 }
+.banner {
+    background: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner p {
+    margin: 0;
+}
+
+.highlight-link {
+    color: #7CB9E8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.highlight-link:hover {
+    transform: scale(1.1);
+    color: #1a2a6c;
+}
 
 /* Title Styling */
 .title {

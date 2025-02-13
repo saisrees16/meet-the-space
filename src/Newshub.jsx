@@ -31,7 +31,13 @@ const Newshub = () => {
             <div className="news-grid">
                 {!loading && !error && articles.length > 0 ? (
                     articles.map((article) => (
-                        <div className="news-card" key={article.id}>
+                        <a
+                            href={article.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="news-card"
+                            key={article.id}
+                        >
                             {/* Red, Yellow, Green Control Buttons */}
                             <div className="tools">
                                 <div className="circle"><span className="red box"></span></div>
@@ -46,11 +52,8 @@ const Newshub = () => {
                             <div className="news-content">
                                 <h2>{article.title}</h2>
                                 <p>{article.summary.substring(0, 100)}...</p>
-                                <a href={article.url} target="_blank" rel="noopener noreferrer">
-                                    Read More →
-                                </a>
                             </div>
-                        </div>
+                        </a>
                     ))
                 ) : (
                     !loading && !error && <p>No news available.</p>

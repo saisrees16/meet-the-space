@@ -16,7 +16,7 @@ function Ar() {
             <div className="iframe-container">
                 {loading && <div className="loader">Loading...</div>}
                 <iframe
-                    src="/meet-the-space/Arpage"
+                    src="https://srinivasc16.github.io/meetthespace/"
                     title="space-view"
                     onLoad={() => setLoading(false)}
                     className="iframe-view"
