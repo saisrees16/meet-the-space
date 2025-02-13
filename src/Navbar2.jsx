@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
-import "./navbar.css";
-import { FiMenu, FiX } from "react-icons/fi";
+import "./navbar2.css";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signOut, onAuthStateChanged, sendPasswordResetEmail } from "firebase/auth";
 
 function Navbar2() {
-    const [menuOpen, setMenuOpen] = useState(false);
     const [user, setUser] = useState(null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [showForgotPassword, setShowForgotPassword] = useState(false);
@@ -46,41 +44,39 @@ function Navbar2() {
     };
 
     return (
-        <div className="navbar">
-            <div className="logo">
-                <p>Akasha Milan</p>
+        <div className="navbarx">
+            {/* Left: Website Name */}
+            <div className="navbar-leftx">
+                <p className="website-namex">Akasha Milan</p>
             </div>
-            <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-                {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-            </button>
-            <nav className={menuOpen ? "nav-links open" : "nav-links"}>
+
+            {/* Center: Navigation Links */}
+            <nav className="navbar-centerx">
                 <Link to="/">Home</Link>
                 <Link to="/Newshub">Discussions</Link>
+            </nav>
 
+            {/* Right: User/Login Section */}
+            <div className="navbar-rightx">
                 {user ? (
                     <div className="user-menu">
-                        <button onClick={() => setDropdownOpen(!dropdownOpen)}>
-                            {user.displayName}
+                        <button className="dropdown-btn" onClick={() => setDropdownOpen(!dropdownOpen)}>
+                            {user.displayName || "User"}
                         </button>
-                        {dropdownOpen && (
-                            <div className="dropdown">
-                                <button onClick={() => setShowForgotPassword(true)}>
-                                    Forgot Password
-                                </button>
-                                <button onClick={handleLogout}>Logout</button>
-                            </div>
-                        )}
+                        <div className={`dropdown-menu ${dropdownOpen ? "active" : ""}`}>
+                            <button onClick={() => setShowForgotPassword(true)}>Forgot Password</button>
+                            <button onClick={handleLogout}>Logout</button>
+                        </div>
                     </div>
                 ) : (
-                    <Link to="/Login">Login</Link>
+                    <Link to="/Login" className="login-btn">Login</Link>
                 )}
-            </nav>
+            </div>
 
             {/* Forgot Password Popup */}
             {showForgotPassword && (
                 <div className="popup">
                     <div className="popup-content">
-                        <FiX className="close-icon" onClick={() => setShowForgotPassword(false)} />
                         <h3>Reset Password</h3>
                         <input
                             type="email"
@@ -90,6 +86,7 @@ function Navbar2() {
                         />
                         <button onClick={handleForgotPassword}>Send Reset Link</button>
                         {message && <p className="message">{message}</p>}
+                        <button className="close-btn" onClick={() => setShowForgotPassword(false)}>Close</button>
                     </div>
                 </div>
             )}

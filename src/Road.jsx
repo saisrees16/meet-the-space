@@ -6,7 +6,6 @@ const roadmapData = [
     {
         title: "1️⃣ School Level (Grades 9-12)",
         subtitle: "Build a Strong Foundation",
-        icon: "📚",
         details: [
             "Focus on STEM subjects: Mathematics, Physics, Chemistry, Computer Science.",
             "Participate in science fairs, robotics competitions, and coding contests.",
@@ -18,7 +17,6 @@ const roadmapData = [
     {
         title: "2️⃣ Undergraduate Studies",
         subtitle: "Bachelor’s Degree in Space Sciences",
-        icon: "🎓",
         details: [
             "Choose a degree: Aerospace Engineering, Mechanical Engineering, Physics, Computer Science.",
             "Take courses on fluid dynamics, propulsion, avionics, space systems.",
@@ -30,7 +28,6 @@ const roadmapData = [
     {
         title: "3️⃣ Specialization",
         subtitle: "Master’s Degree or PhD – Choose Your Path",
-        icon: "🔬",
         details: [
             "Engineering & Space Tech – Focus on spacecraft design, propulsion, satellite communication.",
             "Astronomy & Astrophysics – Work on space observation, dark matter, cosmology.",
@@ -42,7 +39,6 @@ const roadmapData = [
     {
         title: "4️⃣ Industry Experience",
         subtitle: "Get Hands-on Space Projects",
-        icon: "🛰",
         details: [
             "Apply for research fellowships at NASA, ISRO, ESA, or private companies.",
             "Gain experience in CubeSat projects, space propulsion research, and satellite technologies.",
@@ -52,7 +48,6 @@ const roadmapData = [
     {
         title: "5️⃣ Career Opportunities",
         subtitle: "Where to Apply?",
-        icon: "🚀",
         details: [
             "Government Space Agencies – NASA, ISRO, ESA, Roscosmos, JAXA, CNSA.",
             "Private Space Companies – SpaceX, Blue Origin, Rocket Lab, Virgin Galactic.",

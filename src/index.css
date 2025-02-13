@@ -1,5 +1,9 @@
 body{
-  background-image: url('https://ready.so/images/Sand-Texture.webp');
+  background-image: url('./assets/home.jpg');
+  background-size: cover; /* Ensures the image covers the whole screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  background-attachment: fixed;
   color: #fff;
   font-family: GT Walsheim, sans-serif;
   margin: 0;

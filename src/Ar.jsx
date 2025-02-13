@@ -12,23 +12,28 @@ function Ar() {
 
     return (
         <div className="ar">
-            <h1>Augmented Reality</h1>
-            <figure className="animated-container">
+            {/* Background iframe */}
+            <div className="iframe-container">
                 {loading && <div className="loader">Loading...</div>}
                 <iframe
                     src="/meet-the-space/Arpage"
                     title="space-view"
                     onLoad={() => setLoading(false)}
-                    className={`iframe-view ${loading ? "hidden" : "fade-in"}`}
+                    className="iframe-view"
                 />
-            </figure>
-            <div className="button-container">
-                <button className="learn-more" onClick={handleClick}>
-                    <span className="circle">
-                        <span className="icon arrow"></span>
-                    </span>
-                    <span className="button-text">Feel it</span>
-                </button>
+            </div>
+
+            {/* Content Overlay */}
+            <div className="content">
+                <h1>Augmented Reality</h1>
+                <div className="button-container">
+                    <button className="learn-more" onClick={handleClick}>
+                        <span className="circle">
+                            <span className="icon arrow"></span>
+                        </span>
+                        <span className="button-text">Feel it</span>
+                    </button>
+                </div>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@
 /* 🚀 Community Page Container */
 .community-container {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 70px auto;
     padding: 20px;
     text-align: center;
 }
@@ -10,7 +10,7 @@
 .community-container h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: black;
+    color: aliceblue;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: 2px solid black;
@@ -29,7 +29,7 @@
 
 /* 🛰️ Individual Topic Card */
 .topic-card {
-    background: #161b22; /* Darker background for depth */
+    background: white; /* Darker background for depth */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
@@ -56,7 +56,7 @@
 .topic-card h3 {
     margin: 10px 0;
     font-size: 1.4rem;
-    color: #f0f0f0;
+    color: #0f0f0f;
     text-transform: capitalize;
 }
 

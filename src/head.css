@@ -1,16 +1,20 @@
 .headx {
     align-items: center;
     text-align: center;
-    padding: 100px;
+    padding: 170px;
     color: black;
+    background-image: url('./assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .headx h1{
     font-size: 80px;
     text-align: center;
-    color: #191970;
+    color: white;
 }
 .headx p{
     font-size: 20px;
+    color: white;
 }
 /* From Uiverse.io by cssbuttons-io */
 button {
@@ -30,6 +34,7 @@ button {
 button.learn-more {
     width: 12rem;
     height: auto;
+    color: white;
 }
 
 button.learn-more .circle {
@@ -81,7 +86,6 @@ button.learn-more .button-text {
     bottom: 0;
     padding: 0.75rem 0;
     margin: 0 0 0 1.85rem;
-    color: #282936;
     font-weight: 700;
     line-height: 1.6;
     text-align: center;

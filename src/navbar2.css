@@ -1,0 +1,158 @@
+/* Navbar Container */
+.navbarx {
+    display: flex;
+    position: fixed; /* Keeps it fixed at the top */
+    top: 10px; /* Adds slight spacing from the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centers navbar */
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    border-radius: 50px;
+    background: transparent;
+    z-index: 1000; /* Ensures it stays above other content */
+    overflow: visible; /* Prevents hidden elements */
+}
+
+/* Left Section (Website Name) */
+.navbar-leftx .website-namex {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    padding: 10px 20px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Center Section (Navigation Links) */
+.navbar-centerx {
+    display: flex;
+    gap: 20px;
+    padding: 10px 25px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-centerx a {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-centerx a:hover {
+    color: #ff6b6b;
+}
+
+/* Right Section (User/Login with Dropdown) */
+.navbar-rightx {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar-rightx a {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    background: none;
+    border: none;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    border-radius: 8px;
+}
+
+.dropdown-btn:hover {
+    color: #ff6b6b;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+}
+
+/* Show dropdown when .dropdown-menu.active is added */
+.dropdown-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown Links */
+.dropdown-menu a,
+.dropdown-menu button {
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+    text-align: left;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+    background: rgb(255, 168, 168);
+    color: black;
+}
+
+/* Prevent Page Overflow */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbarx {
+        flex-direction: column;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .navbar-centerx {
+        margin: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-rightx {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        top: 40px;
+        right: 10px;
+        width: 150px;
+    }
+}

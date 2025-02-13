@@ -52,15 +52,14 @@ const Careers = () => {
 
     return (
         <div className="careers-container">
-            <h1 className="title">Careers in Space 🚀: Your Ultimate Guide</h1>
+            <h1 className="title">Careers in Space :Your Ultimate Guide</h1>
             <section title="📚 Career Paths">
                 <Paths/>
             </section>
-
             <section className="college-section">
                 <h2 className="college-title">Top Engineering Colleges for Space Studies</h2>
                 <div className="college-grid">
-                    {colleges.map((college, index) => (
+                    {colleges.slice(0, 6).map((college, index) => ( // Showing only 6 initially
                         <a href={college.link} key={index} className="college-card" target="_blank"
                            rel="noopener noreferrer">
                             <img src={college.image} alt={college.name} className="college-image"/>
@@ -72,97 +71,48 @@ const Careers = () => {
                         </a>
                     ))}
                 </div>
-            </section>
-            {/* Salary & Growth Prospects */}
-            <Section title="💰 Salary & Growth Prospects">
-                <div className="salary-table-container">
-                    <table className="salary-table">
-                        <thead>
-                        <tr>
-                            <th>Role</th>
-                            <th>Entry Level ($)</th>
-                            <th>Mid-Level ($)</th>
-                            <th>Senior Level ($)</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {[
-                            {
-                                role: "Astronaut 🚀",
-                                entry: "66,000 - 100,000",
-                                mid: "100,000 - 150,000",
-                                senior: "150,000 - 250,000+"
-                            },
-                            {
-                                role: "Aerospace Engineer 🛰️",
-                                entry: "70,000 - 90,000",
-                                mid: "110,000 - 140,000",
-                                senior: "150,000 - 200,000+"
-                            },
-                            {
-                                role: "Astrophysicist 🔭",
-                                entry: "60,000 - 80,000",
-                                mid: "100,000 - 130,000",
-                                senior: "140,000 - 180,000+"
-                            },
-                            {
-                                role: "Satellite Engineer 🛰",
-                                entry: "65,000 - 85,000",
-                                mid: "95,000 - 130,000",
-                                senior: "140,000 - 170,000+"
-                            },
-                            {
-                                role: "Space Robotics Engineer 🤖",
-                                entry: "75,000 - 95,000",
-                                mid: "120,000 - 150,000",
-                                senior: "160,000 - 200,000+"
-                            },
-                            {
-                                role: "Space Lawyer ⚖️",
-                                entry: "80,000 - 100,000",
-                                mid: "120,000 - 150,000",
-                                senior: "160,000 - 220,000+"
-                            },
-
-                        ].map((job, index) => (
-                            <tr key={index}>
-                                <td>{job.role}</td>
-                                <td>${job.entry}</td>
-                                <td>${job.mid}</td>
-                                <td>${job.senior}</td>
-                            </tr>
-                        ))}
-                        </tbody>
-                    </table>
+                <div className="see-all-container">
+                    <a href="/meet-the-space/construction" className="see-all-btn">See All</a>
                 </div>
-            </Section>
+            </section>
 
             <Road/>
-
-            <Section title="📚 Recommended Courses">
-                <ul>
+            <section className="courses-section">
+                <div className="courses-header">
+                    <h2 className="courses-title">Recommended Courses</h2>
+                    <button className="see-all-btn" onClick={() => window.location.href = "/meet-the-space/construction"}>See All</button>
+                </div>
+                <div className="courses-grid">
                     {[
                         {
                             name: "MIT OpenCourseWare - Aerospace Engineering",
-                            url: "https://ocw.mit.edu/courses/aeronautics-and-astronautics/"
+                            url: "https://ocw.mit.edu/courses/aeronautics-and-astronautics/",
+                            image: "https://placehold.co/300x180"
                         },
                         {
                             name: "Coursera - Space Science & Technology",
-                            url: "https://www.coursera.org/courses?query=space%20science"
+                            url: "https://www.coursera.org/courses?query=space%20science",
+                            image: "https://placehold.co/300x180"
                         },
                         {
                             name: "edX - Astronomy & Space Exploration",
-                            url: "https://www.edx.org/course/astronomy-exploring-time-and-space"
+                            url: "https://www.edx.org/course/astronomy-exploring-time-and-space",
+                            image: "https://placehold.co/300x180"
                         },
                     ].map((course, index) => (
-                        <li key={index}>
-                            <a href={course.url} target="_blank" rel="noopener noreferrer">
-                                {course.name}
-                            </a>
-                        </li>
+                        <a href={course.url} key={index} target="_blank" rel="noopener noreferrer"
+                           className="course-card">
+                            <img src={course.image} alt={course.name} className="course-image"/>
+                            <div className="course-info">
+                                <h3 className="course-name">{course.name}</h3>
+                                <p className="course-description">Explore advanced topics in space science and
+                                    engineering.</p>
+                            </div>
+                        </a>
                     ))}
-                </ul>
-            </Section>
+                </div>
+            </section>
+
         </div>
     );
 };

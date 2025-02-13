@@ -1,24 +1,33 @@
-/* Main Container */
+/* Main AR Section */
 .ar {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    animation: slide-in 1s ease-in-out;
-    color: black;
-    background: transparent;
-    border-radius: 15px;
-    padding: 20px;
-    border: 1.5px solid black;
-    width: 75%;
-    margin: 20px auto;
-    max-width: 900px;
+    color: white;
+    overflow: hidden;
 }
 
-/* Wrapper for Animation */
-.animated-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+/* Background iFrame Container */
+.iframe-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 500px;
+    height: 100%;
+    z-index: -1; /* Send behind content */
+    overflow: hidden;
+}
+
+/* iFrame as Background */
+.iframe-view {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover; /* Ensure it covers the entire background */
 }
 
 /* Loader Styling */
@@ -27,88 +36,22 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #000;
+    font-size: 20px;
+    font-weight: bold;
     color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14px;
 }
 
-/* Iframe View */
-.iframe-view {
-    width: 100%;
-    height: 300px;
-    border: none;
-    transition: transform 0.3s ease-in-out;
+/* Content Overlay */
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
     border-radius: 10px;
 }
 
-/* Hidden State */
-.iframe-view.hidden {
-    display: none;
-}
-
-/* Fade-in Animation */
-.iframe-view.fade-in {
-    animation: fadeIn 1s ease-in;
-}
-
-/* Hover Effect */
-.animated-container:hover .iframe-view {
-    transform: scale(1.05);
-}
-
-/* Slide-in Animation */
-@keyframes slide-in {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .ar {
-        width: 80%;
-        padding: 15px;
-    }
-
-    .animated-container {
-        width: 100%;
-    }
-
-    .iframe-view {
-        height: 250px;
-    }
-}
-
-@media (max-width: 480px) {
-    .ar {
-        width: 90%;
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .iframe-view {
-        height: 200px;
-    }
-
-    .loader {
-        font-size: 12px;
-        padding: 8px;
-    }
+/* Heading */
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 400px;
+    color: white;
 }

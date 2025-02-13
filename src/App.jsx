@@ -11,6 +11,7 @@ import Login from "./Login.jsx";
 import Discussion from "./Discussion.jsx";
 import Construction from "./Construction.jsx";
 import Careers from "./Careers.jsx";
+import Footer from "./Footer.jsx";
 
 function App() {
     return (
@@ -23,13 +24,20 @@ function App() {
 function Layout() {
     const location = useLocation();
     const hideNavbarRoutes = ["/Arpage"];
-    const communityRoutes = ["/Community"]; // Routes where CommunityNavbar should be displayed
+    const hideFooterRoutes = ["/Arpage"];
+
+    // Use regex to match dynamic discussion routes
+    const isCommunityNavbar =
+        ["/Community", "/Login"].includes(location.pathname) ||
+        location.pathname.startsWith("/discussion/");
 
     return (
         <>
-            {hideNavbarRoutes.includes(location.pathname) ? null :
-                communityRoutes.includes(location.pathname) ? <Navbar2 /> : <Navbar />
+            {/* Conditionally render Navbar */}
+            {!hideNavbarRoutes.includes(location.pathname) &&
+                (isCommunityNavbar ? <Navbar2 /> : <Navbar />)
             }
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Arpage" element={<Arpage />} />
@@ -42,6 +50,9 @@ function Layout() {
                 <Route path="/construction" element={<Construction />} />
                 <Route path="/careers" element={<Careers />} />
             </Routes>
+
+            {/* Conditionally render Footer */}
+            {!hideFooterRoutes.includes(location.pathname) && <Footer />}
         </>
     );
 }
