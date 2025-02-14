@@ -44,7 +44,6 @@
 
 /* Card details */
 .card-details {
-    color: black;
     gap: .5em;
     display: grid;
     place-content: center;

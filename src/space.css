@@ -1,0 +1,248 @@
+/* --- General Styling --- */
+:root {
+    --primary-color: #00dbde;
+    --secondary-color: #fc00ff;
+    --background-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    --text-color: white;
+    --card-bg: rgba(255, 255, 255, 0.08);
+    --card-hover-bg: rgba(255, 255, 255, 0.15);
+    --border-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Background Star Animation --- */
+.space-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 4s infinite ease-in-out alternate;
+}
+
+/* Twinkle Animation */
+@keyframes twinkle {
+    0% { opacity: 0.5; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* --- Header --- */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Floating Effect */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* --- Tab Navigation --- */
+.tabs {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.tab-button:hover {
+    background: var(--card-hover-bg);
+    transform: translateY(-3px);
+}
+
+.tab-button.active {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 0 15px rgba(252, 0, 255, 0.3);
+}
+
+/* --- Cards (Reusable Component) --- */
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: var(--card-hover-bg);
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Stats Section --- */
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+    background: var(--card-hover-bg);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* --- Missions Section --- */
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.mission-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    background: var(--card-hover-bg);
+}
+
+.mission-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.mission-year {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* --- Careers Section --- */
+.careers-list {
+    list-style: none;
+    padding: 20px;
+}
+
+.careers-list li {
+    padding: 15px;
+    background: var(--card-bg);
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.careers-list li:hover {
+    background: var(--card-hover-bg);
+    transform: translateX(10px);
+    border-left: 5px solid var(--secondary-color);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .missions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+}

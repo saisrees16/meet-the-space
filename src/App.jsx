@@ -12,6 +12,7 @@ import Discussion from "./Discussion.jsx";
 import Construction from "./Construction.jsx";
 import Careers from "./Careers.jsx";
 import Footer from "./Footer.jsx";
+import Space from "./space.jsx";
 
 function App() {
     return (
@@ -47,6 +48,7 @@ function Layout() {
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Community" element={<Community />} />
                 <Route path="/discussion/:title" element={<Discussion />} />
+                <Route path="/Space" element={<Space />} />
                 <Route path="/construction" element={<Construction />} />
                 <Route path="/careers" element={<Careers />} />
             </Routes>

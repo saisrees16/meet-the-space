@@ -1,22 +1,55 @@
+/* Reset defaults to ensure no spacing issues */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Header Section */
 .headx {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 170px;
-    color: black;
     background-image: url('./assets/background.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
-.headx h1{
-    font-size: 80px;
+
+.headx h1 {
+    font-size: clamp(40px, 5vw, 80px);
     text-align: center;
     color: white;
+    margin-bottom: 20px;
+    animation: fadeIn 0.8s ease-out;
+    width: 100%;
+    padding: 0 20px;
 }
-.headx p{
-    font-size: 20px;
+
+.headx p {
+    font-size: clamp(16px, 2vw, 20px);
     color: white;
+    max-width: 800px;
+    margin: 10px  20px 10px 460px;
+    animation: fadeIn 0.8s ease-out 0.2s backwards;
+    width: 100%;
+    padding: 0 20px;
 }
-/* From Uiverse.io by cssbuttons-io */
+
+/* Button Styling */
 button {
     position: relative;
     display: inline-block;
@@ -29,10 +62,11 @@ button {
     padding: 0;
     font-size: inherit;
     font-family: inherit;
+    animation: fadeIn 0.8s ease-out 0.4s backwards;
 }
 
 button.learn-more {
-    width: 12rem;
+    width: clamp(160px, 15vw, 192px);
     height: auto;
     color: white;
 }
@@ -90,6 +124,7 @@ button.learn-more .button-text {
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
+    font-size: clamp(14px, 1.5vw, 16px);
 }
 
 button:hover .circle {
@@ -104,6 +139,8 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
     color: #fff;
 }
+
+/* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -112,5 +149,14 @@ button:hover .button-text {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Media Query to handle potential mobile issues */
+@media screen and (max-width: 767px) {
+    .headx {
+        width: 100vw;
+        min-height: 100vh;
+        height: 100vh;
     }
 }
