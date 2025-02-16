@@ -22,9 +22,9 @@ body {
 
 /* Container */
 .container {
-    margin-top: 50px;
+    margin-top: 80px;
     max-width: 1200px;
-    padding: 20px;
+    padding: 20px 20px 20px 110px;
     text-align: center;
 }
 

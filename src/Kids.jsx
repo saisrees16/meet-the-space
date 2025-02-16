@@ -74,7 +74,7 @@ const KidsSpaceExplorer = () => {
                             <span className="title">Space Adventure</span>
                             <div>
                                 <strong>Explore the Galaxy!</strong>
-                                <p>Discover planets & solve missions!</p>
+                                <p>Discover planets&missions!</p>
                                 <button>P L A Y</button>
                             </div>
                         </div>
@@ -93,6 +93,7 @@ const KidsSpaceExplorer = () => {
                     </div>
                 </div>
             </section>
+
 
             {/* Space Learning Videos */}
             <section>

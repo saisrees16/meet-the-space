@@ -25,7 +25,7 @@ function App() {
 function Layout() {
     const location = useLocation();
     const hideNavbarRoutes = ["/Arpage"];
-    const hideFooterRoutes = ["/Arpage"];
+    const hideFooterRoutes = ["/Arpage","/Jigsaw"];
 
     // Use regex to match dynamic discussion routes
     const isCommunityNavbar =
@@ -40,7 +40,7 @@ function Layout() {
             }
 
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="" element={<Home />} />
                 <Route path="/Arpage" element={<Arpage />} />
                 <Route path="/Newshub" element={<Newshub />} />
                 <Route path="/Kids" element={<Kids />} />

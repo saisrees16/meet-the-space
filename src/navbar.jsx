@@ -18,7 +18,7 @@ function Navbar() {
                 <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
                 <Link to="/Newshub" onClick={() => setIsOpen(false)}>News Hub</Link>
                 <Link to="/Careers" onClick={() => setIsOpen(false)}>Careers</Link>
-                <Link to="/construction" onClick={() => setIsOpen(false)}>Space Stations</Link>
+                <Link to="/Space" onClick={() => setIsOpen(false)}>Space Stations</Link>
                 <Link to="/Community" onClick={() => setIsOpen(false)}>Community</Link>
             </nav>
 

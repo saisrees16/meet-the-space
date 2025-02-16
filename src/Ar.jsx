@@ -1,13 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Ar.css";
 
 function Ar() {
     const [loading, setLoading] = useState(true);
+    const [showPopup, setShowPopup] = useState(false);
+    const [deviceType, setDeviceType] = useState("laptop");
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        setDeviceType(isMobile ? "mobile" : "laptop");
+    }, []);
+
     const handleClick = () => {
-        navigate("/Arpage"); // Redirects to the 'Arpage' JSX page
+        setShowPopup(true);
+    };
+
+    const handleContinue = () => {
+        setShowPopup(false);
+        navigate("/Arpage"); // Redirects to the 'Arpage' page
     };
 
     return (
@@ -35,6 +47,22 @@ function Ar() {
                     </button>
                 </div>
             </div>
+
+            {/* Popup */}
+            {showPopup && (
+                <div className="popup-overlay">
+                    <div className="popup">
+                        <button className="close-btn" onClick={() => setShowPopup(false)}>X</button>
+                        <p>You are currently using a {deviceType}.</p>
+                        {deviceType === "laptop" ? (
+                            <p>You can experience Augmented Reality.</p>
+                        ) : (
+                            <p>You can experience Virtual Reality.</p>
+                        )}
+                        <button className="continue-btn" onClick={handleContinue}>OK, Continue</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
