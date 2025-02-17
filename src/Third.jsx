@@ -4,7 +4,14 @@ import { useNavigate } from "react-router-dom";
 const Third = () => {
     const navigate = useNavigate();
     const handleclick = () => {
-        navigate("/Kids");
+        navigate("/Kids"); // Navigate to Kids page first
+
+        setTimeout(() => {
+            const element = document.querySelector(".space-explorer"); // Select element by class
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 200); // Add delay to ensure page loads first
     };
     return (
         <div className="kids-containerx">
@@ -22,7 +29,7 @@ const Third = () => {
                 </p>
 
                 <div className="button-containerx">
-                    <button className="kid-button button-play">Start Playing! 🎯</button>
+                    <button className="kid-button button-play" onClick={handleclick}>Start Playing! 🎯</button>
                     <button className="kid-button button-explore" onClick={handleclick}>Explore More! 🗺️</button>
                 </div>
 
