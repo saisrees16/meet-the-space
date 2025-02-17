@@ -13,11 +13,11 @@ function News() {
     }, []);
 
     return (
-        <div className="news-container">
-            <h2 className="news-title">Latest Space News</h2>
-            <div className="news-cards">
+        <div className="news-containerl">
+            <h2 className="news-titlel">Latest Space News</h2>
+            <div className="news-cardsl">
                 {newsData.map((news) => (
-                    <div className="card" key={news.id}>
+                    <div className="cardx" key={news.id}>
                         <img src={news.image_url} alt={news.title} className="news-image" />
                         <div className="card-details">
                             <h3 className="text-title">{news.title}</h3>

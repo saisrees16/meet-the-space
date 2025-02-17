@@ -52,8 +52,8 @@ const Careers = () => {
 
     return (
         <div className="careers-container">
-            <h1 className="title">Careers in Space :Your Ultimate Guide</h1>
-            <section className="banner">
+            <h1 className="titley">Careers in Space :Your Ultimate Guide</h1>
+            <section className="bannery">
                 <p>
                     We sincerely appreciate your time in visiting our new page.
                     To learn more about the career opportunities we offer, explore here:

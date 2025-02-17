@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import './space.css';
+import nasa from './assets/nasa.png';
+import spacex from './assets/spacex.png';
+import isro from './assets/isro.png';
 
 const Space = () => {
     const [selectedOrg, setSelectedOrg] = useState('nasa');
@@ -30,7 +33,7 @@ const Space = () => {
         nasa: {
             name: "NASA",
             fullName: "National Aeronautics and Space Administration",
-            logo: "/api/placeholder/120/120",
+            logo: nasa,
             bannerImage: "/api/placeholder/1200/400",
             youtube: {
                 channelName: "NASA",
@@ -50,7 +53,7 @@ const Space = () => {
         spacex: {
             name: "SpaceX",
             fullName: "Space Exploration Technologies Corp.",
-            logo: "/api/placeholder/120/120",
+            logo: spacex,
             bannerImage: "/api/placeholder/1200/400",
             youtube: {
                 channelName: "SpaceX",
@@ -70,7 +73,7 @@ const Space = () => {
         isro: {
             name: "ISRO",
             fullName: "Indian Space Research Organisation",
-            logo: "/api/placeholder/120/120",
+            logo: isro,
             bannerImage: "/api/placeholder/1200/400",
             youtube: {
                 channelName: "ISRO",
@@ -78,7 +81,7 @@ const Space = () => {
                 totalViews: "400M",
                 joinDate: "2007",
                 featuredVideos: [
-                    { title: "Chandrayaan-3 Landing", thumbnail: "/api/placeholder/320/180", views: "5M", duration: "12:10", description: "India's lunar landing success" },
+                    { title: "Chandrayaan-3 Landing", thumbnail: "https://www.youtube.com/live/DLA_64yz8Ss?si=tXw-S1DfJrWBcFvH", views: "5M", duration: "12:10", description: "India's lunar landing success" },
                     { title: "Gaganyaan Mission", thumbnail: "/api/placeholder/320/180", views: "1.3M", duration: "10:45", description: "India's first human spaceflight program" }
                 ]
             },

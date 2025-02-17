@@ -13,6 +13,7 @@ import Construction from "./Construction.jsx";
 import Careers from "./Careers.jsx";
 import Footer from "./Footer.jsx";
 import Space from "./space.jsx";
+import {useEffect} from "react";
 
 function App() {
     return (
@@ -24,6 +25,10 @@ function App() {
 
 function Layout() {
     const location = useLocation();
+
+    useEffect(() => {
+        console.log("Current Path:", location.pathname);
+    }, [location]);
     const hideNavbarRoutes = ["/Arpage"];
     const hideFooterRoutes = ["/Arpage","/Jigsaw"];
 

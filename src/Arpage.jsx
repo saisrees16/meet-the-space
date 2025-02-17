@@ -1,6 +1,6 @@
 import "aframe";
 import { useEffect } from "react";
-import Ar from "./Ar";
+import './arpage.css';
 
 const Arpage = () => {
     useEffect(() => {
@@ -40,6 +40,7 @@ const Arpage = () => {
                 <button onClick={() => window.toggleFullscreen()} style={styles.button}>
                     Fullscreen
                 </button>
+                <button onClick={() => window.location.href='/'} style={styles.button}>Back to Home</button>
             </div>
             <div className="ar">
                 <h1>Augmented Reality</h1>
