@@ -3,7 +3,7 @@ import "./navbar2.css";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signOut, onAuthStateChanged, sendPasswordResetEmail } from "firebase/auth";
 
-function Navbar2() {
+function navbarKids() {
     const [user, setUser] = useState(null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [showForgotPassword, setShowForgotPassword] = useState(false);
@@ -53,7 +53,9 @@ function Navbar2() {
             {/* Center: Navigation Links */}
             <nav className="navbar-centerx">
                 <Link to="/">Home</Link>
-                <Link to="/Newshub">Discussions</Link>
+                <Link to="/Newshub">News Hub</Link>
+                <Link to="/Newshub">Games</Link>
+                <Link to="/Newshub">Learning</Link>
             </nav>
 
             {/* Right: User/Login Section */}
@@ -94,4 +96,4 @@ function Navbar2() {
     );
 }
 
-export default Navbar2;
+export default navbarKids;

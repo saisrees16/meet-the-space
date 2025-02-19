@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import "./navbar.css";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-
     return (
         <div className="navbar">
             {/* Left: Website Name */}
@@ -19,7 +18,6 @@ function Navbar() {
                 <Link to="/Newshub" onClick={() => setIsOpen(false)}>News Hub</Link>
                 <Link to="/Careers" onClick={() => setIsOpen(false)}>Careers</Link>
                 <Link to="/Space" onClick={() => setIsOpen(false)}>Space Stations</Link>
-                <Link to="/Community" onClick={() => setIsOpen(false)}>Community</Link>
             </nav>
 
             {/* Right: Kids Section */}

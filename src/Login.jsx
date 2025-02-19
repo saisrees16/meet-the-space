@@ -27,7 +27,7 @@ function Login() {
         try {
             await signInWithPopup(auth, googleProvider);
             alert("Google Login Successful!");
-            navigate("/Community");
+            navigate("/Kids");
         } catch (error) {
             setError("Google Sign-in Failed");
         }

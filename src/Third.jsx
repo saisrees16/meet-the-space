@@ -11,7 +11,7 @@ const Third = () => {
             if (element) {
                 element.scrollIntoView({ behavior: "smooth" });
             }
-        }, 200); // Add delay to ensure page loads first
+        }, 200);
     };
     return (
         <div className="kids-containerx">

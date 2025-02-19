@@ -36,17 +36,17 @@ body {
     margin-bottom: 20px;
     animation: fadeIn 0.8s ease-out;
     width: 100%;
-    padding: 10px 20px;
+    padding: 30px 30px 10px 70px;
 }
 
 .headx p {
     font-size: clamp(16px, 2vw, 20px);
     color: white;
     max-width: 800px;
-    margin: 10px  20px 10px 460px;
+    margin: 10px  20px 10px 500px;
     animation: fadeIn 0.8s ease-out 0.2s backwards;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 20px 10px 20px;
 }
 
 /* Button Styling */
