@@ -1,13 +1,25 @@
 .quiz-container {
     max-width: 800px;
-    margin: 100px auto;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     background: #1a1a2e;
     color: white;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 255, 0.1);
 }
+.login-button{
+    background: white;
+    color: black;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
 
+    border: #1a2a6c 2px solid;
+}
 .quiz-header {
     display: flex;
     justify-content: space-between;

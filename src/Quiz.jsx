@@ -69,7 +69,7 @@ const SpaceQuiz = () => {
             <div className="quiz-container">
                 <h1 className="quiz-title">Please Log In</h1>
                 <p className="login-message">You need to be logged in to take the quiz.</p>
-                <button className="login-button" onClick={() => window.location.href = "/login"}>
+                <button className="login-button" onClick={() => window.location.href = "/meet-the-space/Login"}>
                     Go to Login
                 </button>
             </div>

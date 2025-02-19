@@ -11,9 +11,17 @@ const KidsSpaceExplorer = () => {
         document.title = "Explore Space | Fun Learning for Kids";
     }, []);
 
-    const handleGameRedirect = (gamePath) => {
-        navigate(gamePath);
+    const handleGameRedirect = (page, section) => {
+        navigate(page); // Navigate to the page first
+
+        setTimeout(() => {
+            const element = document.querySelector(`.${section}`); // Select the section using ID
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 300); // Delay slightly to ensure page loads
     };
+
 
     const scroll = (direction) => {
         if (scrollRef.current) {
@@ -63,7 +71,7 @@ const KidsSpaceExplorer = () => {
                             <div>
                                 <strong>Test your puzzle skills!</strong>
                                 <p>Piece together space images!</p>
-                                <button>P L A Y</button>
+                                <button onClick={() => handleGameRedirect('/Jigsaw', 'jigsaw')}>P L A Y</button>
                             </div>
                         </div>
                     </div>
@@ -87,7 +95,7 @@ const KidsSpaceExplorer = () => {
                             <div>
                                 <strong>Test your knowledge!</strong>
                                 <p>Answer fun space questions!</p>
-                                <button>P L A Y</button>
+                                <button onClick={() => handleGameRedirect('/Quiz', 'quiz-container')}>P L A Y</button>
                             </div>
                         </div>
                     </div>
@@ -98,12 +106,13 @@ const KidsSpaceExplorer = () => {
             {/* Space Learning Videos */}
             <section>
                 <div className="containerl">
-                    <h2>Learn about Space</h2>
                     <div className="video-wrapper">
-                        <button className="scroll-btn left" onClick={() => scroll("left")}>
-                            <ChevronLeft size={32} />
-                        </button>
-
+                        <div className="video-header">
+                            <h2>Learn about Space</h2>
+                            <button className="view-all"
+                                    onClick={() => window.location.href = "/meet-the-space/construction"}>View All
+                            </button>
+                        </div>
                         <div className="video-scroll" ref={scrollRef}>
                             <iframe width="560" height="315"
                                     src="https://www.youtube.com/embed/yCjJyiqpAuU?si=hVNs-xeISx3CVNj2"
@@ -129,17 +138,13 @@ const KidsSpaceExplorer = () => {
                                 allowFullScreen>
                             </iframe>
                         </div>
-
-                        <button className="scroll-btn right" onClick={() => scroll("right")}>
-                            <ChevronRight size={32}/>
-                        </button>
                     </div>
                 </div>
             </section>
 
             {/* Fun Learning Section */}
             <section className="fun-learning">
-                <h2 className="section-title">Super Space Facts! ⭐</h2>
+            <h2 className="section-title">Super Space Facts! ⭐</h2>
                 <div className="learning-text">
                     <p>The Sun is so big that about 1.3 million Earths could fit inside it!</p>
                     <p>A day on Venus is longer than its year!</p>
