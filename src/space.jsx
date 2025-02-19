@@ -12,10 +12,15 @@ const Space = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch(`https://newsapi.org/v2/everything?q=${selectedOrg}&apiKey=a5a062XhtScV4vrtTDhcyOEiXvImWW7TiateyCxs`)
+        fetch(`https://api.nasa.gov/neo/rest/v1/neo/3542519?api_key=a5a062XhtScV4vrtTDhcyOEiXvImWW7TiateyCxs`)
             .then(response => response.json())
-            .then(data => setNews(data.articles.slice(0, 5)));
+            .then(data => {
+                console.log("API Response:", data);  // Check the structure
+                setNews(data);  // Store the full object
+            })
+            .catch(error => console.error('Error fetching data:', error));
     }, [selectedOrg]);
+
 
     useEffect(() => {
         fetch(`https://jobs-api.com/space-jobs`)
@@ -40,17 +45,189 @@ const Space = () => {
                 subscribers: "10.2M",
                 totalViews: "1.2B",
                 joinDate: "2008",
-                featuredVideos: [
-                    { title: "Live: NASA Astronauts Working in Space", thumbnail: "/api/placeholder/320/180", views: "2.1M", duration: "15:32", description: "Watch astronauts perform spacewalk at the ISS" },
-                    { title: "Mars Perseverance Rover: Latest Updates", thumbnail: "/api/placeholder/320/180", views: "1.8M", duration: "12:45", description: "See the latest discoveries from Mars" }
-                ]
-            },
-            currentMissions: [
-                { name: "Artemis Program", status: "Active", type: "Lunar Exploration", description: "Returning humans to the Moon", launchDate: "2024-2025", image: "/api/placeholder/400/300" },
-                { name: "Mars Perseverance", status: "Active", type: "Mars Exploration", description: "Exploring Mars' Jezero Crater", launchDate: "2020", image: "/api/placeholder/400/300" }
-            ]
+        featuredVideos: [
+        {
+            "title": "Live: NASA Astronauts Working in Space",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "-Y04Zic1-r4",
+            "views": "2.1M",
+            "duration": "15:32",
+            "description": "Watch astronauts perform spacewalk at the ISS"
         },
-        spacex: {
+        {
+            "title": "Mars Perseverance Rover: Latest Updates",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "CIaHiGbFybQ",
+            "views": "1.8M",
+            "duration": "12:45",
+            "description": "See the latest discoveries from Mars"
+        },
+        {
+            "title": "James Webb Telescope: Unveiling the Universe",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "2pux7v9qJ58",
+            "views": "3.5M",
+            "duration": "18:20",
+            "description": "Discover the latest images from the JWST"
+        },
+        {
+            "title": "NASA’s Artemis I: Journey to the Moon",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "-YNZiasRG0Q",
+            "views": "2.3M",
+            "duration": "14:10",
+            "description": "See the highlights of Artemis I mission"
+        },
+        {
+            "title": "Hubble’s Greatest Discoveries",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "-Y04Zic1-r4",
+            "views": "4.1M",
+            "duration": "20:45",
+            "description": "Explore the breathtaking images captured by Hubble"
+        },
+        {
+            "title": "How Long Does it Take to Get to the Moon, Mars, Jupiter? NASA Expert",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "4gDntIl2JSc?si=8SoS-gMGj22iWvF0",
+            "views": "3.2K",
+            "duration": "1:19",
+            "description": "A NASA expert explains space travel times."
+        },
+        {
+            "title": "Why Does the Moon Look Larger at the Horizon? NASA Expert",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "yuxWyIe8TIc?si=DgUQBBq-YU6meWrP",
+            "views": "36K",
+            "duration": "7:45",
+            "description": "Learn why the Moon appears larger near the horizon."
+        },
+        {
+            "title": "Artemis II to the Moon: Launch to Splashdown (NASA Mission Animation)",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "Ke6XX8FHOHM?si=8um0N0iFVeHWlvDa",
+            "views": "721K",
+            "duration": "7:45",
+            "description": "Watch an animation of Artemis II's journey to the Moon."
+        },
+        {
+            "title": "NASA’s Day of Remembrance 2025",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "6pHKGo9bUZw?si=5_pVHFa_TaEyGUMe",
+            "views": "86K",
+            "duration": "2:46",
+            "description": "Honoring NASA astronauts who made the ultimate sacrifice."
+        },
+        {
+            "title": "Planetary Defenders (Official NASA Trailer)",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "xIjuBrPlxTU?si=WEpHItwwed7D5CWI",
+            "views": "147K",
+            "duration": "2:19",
+            "description": "A NASA mission dedicated to planetary defense."
+        },
+        {
+            "title": "Administrator Nelson, Deputy Administrator Melroy Bid NASA Farewell",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "XQgTNI8uow0?si=j6FZRqqtvNCF3tkD",
+            "views": "34K",
+            "duration": "5:43",
+            "description": "A farewell message from NASA’s leaders."
+        },
+        {
+            "title": "NASA 2025: To the Moon, Mars, and Beyond",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "PPQ29WRT-rU?si=6Q1JR12-qKb5aytM",
+            "views": "358K",
+            "duration": "2:18",
+            "description": "NASA’s roadmap for space exploration in 2025."
+        },
+        {
+            "title": "Space Station Astronauts Deliver a Christmas Message for 2024",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "oYMTXZ1a2NU?si=TY9SVby5XQ1sBAFp",
+            "views": "971K",
+            "duration": "2:10",
+            "description": "A holiday message from astronauts aboard the ISS."
+        },
+        {
+            "title": "Artemis Accords: Celebrating 50 Country Signatories",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "plS6ijeJjf4?si=uGbvTMjw2c8Do_ai",
+            "views": "24K",
+            "duration": "1:07",
+            "description": "NASA celebrates international cooperation in space."
+        },
+        {
+            "title": "NASA: Best of 2024",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "pvjzva-q58Y?si=mMp9HDtA23OgL81v",
+            "views": "267K",
+            "duration": "2:50",
+            "description": "NASA’s highlights from the year 2024."
+        },
+        {
+            "title": "Space Station Astronauts Deliver a Thanksgiving Message for 2024",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "DO2tTUmoXmk?si=tYIdfbIRBqOEE1jP",
+            "views": "139K",
+            "duration": "2:00",
+            "description": "A special Thanksgiving message from space."
+        },
+        {
+            "title": "NASA Rocket Engine Fireplace - 8 Hours in 4K",
+            "thumbnail": "/api/placeholder/320/180",
+            "videoId": "_cgTVTwu4nw?si=NEunRtYVaN6L-wiB",
+            "views": "560K",
+            "duration": "8:00:29",
+            "description": "Relax with 8 hours of NASA’s rocket engine sounds."
+        }
+    ]
+    },
+    currentMissions: [
+                    {
+                        "name": "Artemis Program",
+                        "status": "Active",
+                        "type": "Lunar Exploration",
+                        "description": "Returning humans to the Moon",
+                        "launchDate": "2024-2025",
+                        "image": "/api/placeholder/400/300"
+                    },
+                    {
+                        "name": "Mars Perseverance",
+                        "status": "Active",
+                        "type": "Mars Exploration",
+                        "description": "Exploring Mars' Jezero Crater",
+                        "launchDate": "2020",
+                        "image": "/api/placeholder/400/300"
+                    },
+                    {
+                        "name": "James Webb Space Telescope",
+                        "status": "Active",
+                        "type": "Astronomy",
+                        "description": "Observing the universe in infrared",
+                        "launchDate": "2021",
+                        "image": "/api/placeholder/400/300"
+                    },
+                    {
+                        "name": "International Space Station",
+                        "status": "Active",
+                        "type": "Human Spaceflight",
+                        "description": "Microgravity research and astronaut training",
+                        "launchDate": "1998",
+                        "image": "/api/placeholder/400/300"
+                    },
+                    {
+                        "name": "Europa Clipper",
+                        "status": "Upcoming",
+                        "type": "Planetary Exploration",
+                        "description": "Investigating Jupiter's icy moon Europa",
+                        "launchDate": "2024",
+                        "image": "/api/placeholder/400/300"
+                    }
+                ]
+        },
+    spacex: {
             name: "SpaceX",
             fullName: "Space Exploration Technologies Corp.",
             logo: spacex,
@@ -140,7 +317,7 @@ const Space = () => {
                 {selectedSection === 'missions' && (
                     <section>
                         <h3>Current Missions</h3>
-                        <div className="missions-grid">
+                        <div className="missions-grid" onClick={() => (window.location.href = "/meet-the-space/Newshub")}>
                             {selectedOrganization.currentMissions.map((mission, index) => (
                                 <div key={index} className="mission-card">
                                     <img src={mission.image} alt={mission.name} />

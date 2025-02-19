@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./paths.css";
 import { FaUserAstronaut, FaSatellite, FaRocket, FaMicroscope, FaRobot, FaGavel } from "react-icons/fa";
 
@@ -66,7 +67,11 @@ const careers = [
 ];
 
 const Paths = () => {
-    const [selectedCareer, setSelectedCareer] = useState(null);
+    const navigate = useNavigate();
+
+    const handleCareerClick = () => {
+        navigate(`/Options`);
+    };
 
     return (
         <div className="career-paths-container">
@@ -74,27 +79,16 @@ const Paths = () => {
 
             <div className="career-grid">
                 {careers.map((career, index) => (
-                    <div key={index} className="career-card" onClick={() => setSelectedCareer(career)}>
+                    <div key={index} className="career-card">
                         <div className="career-icon">{career.icon}</div>
                         <h3 className="career-title">{career.title}</h3>
                         <p className="career-description">{career.description}</p>
+                        <button className="career-button" onClick={() => handleCareerClick()}>
+                            Learn More
+                        </button>
                     </div>
                 ))}
             </div>
-
-            {/* Modal for displaying career details */}
-            {selectedCareer && (
-                <>
-                    <div className="modal-overlay" onClick={() => setSelectedCareer(null)}></div>
-                    <div className="modal">
-                        <h2>{selectedCareer.title}</h2>
-                        <p><strong>Salary:</strong> {selectedCareer.details.salary}</p>
-                        <p><strong>Key Skills:</strong> {selectedCareer.details.skills.join(", ")}</p>
-                        <p><strong>Education Required:</strong> {selectedCareer.details.education}</p>
-                        <span className="close-icon" onClick={() => setSelectedCareer(null)}>&times;</span>
-                    </div>
-                </>
-            )}
         </div>
     );
 };

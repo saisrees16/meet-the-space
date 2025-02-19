@@ -1,0 +1,75 @@
+.gamesz {
+    text-align: center;
+    padding: 30px;
+    margin: 70px auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.games-headerz h2 {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.games-headerz p {
+    font-size: 1.2rem;
+    color: #ffe;
+}
+
+.games-containerz {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.game-cardz {
+    background: #fff;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.game-cardz:hover {
+    transform: scale(1.05);
+    background: #ff6b6b;
+    color: white;
+}
+
+.game-titlez {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.game-cardz p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.game-cardz button {
+    background: #ffdd57;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.game-cardz button:hover {
+    background: #ffd700;
+    transform: scale(1.1);
+}
+
+

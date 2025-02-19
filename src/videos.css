@@ -1,0 +1,175 @@
+/* Fun and Playful YouTube Search CSS */
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 1200px;
+}
+
+/* Animated Background Stars */
+.video-section::before,
+.video-section::after {
+    content: "✨";
+    position: absolute;
+    font-size: 2rem;
+    animation: twinkle 3s infinite alternate;
+}
+
+.video-section::before {
+    top: 10px;
+    left: 20px;
+}
+
+.video-section::after {
+    bottom: 10px;
+    right: 20px;
+}
+
+
+/* Title */
+.titlez {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    animation: bounce 2s infinite alternate;
+}
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: 0.3s ease-in-out;
+    max-width: 600px;
+    width: 100%;
+}
+
+.search-bar:hover {
+    transform: scale(1.05);
+}
+
+.search-bar input {
+    padding: 12px;
+    flex: 1;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    text-align: center;
+    background: white;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-bar input:focus {
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.search-bar input::placeholder {
+    color: #888;
+    font-weight: normal;
+}
+
+.search-bar button {
+    padding: 12px 18px;
+    border: none;
+    background: #ffd700;
+    color: #2b1055;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+.search-bar button:hover {
+    background: #ff6b6b;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Video Container - 3 videos per row */
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Responsive - Adjust columns for smaller screens */
+@media (max-width: 1024px) {
+    .video-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Video Styling */
+.video-container iframe {
+    border-radius: 15px;
+    border: 5px solid #ffd700;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    height: 250px;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+}
+
+.video-container iframe:hover {
+    transform: scale(1.1);
+    border-color: #ff6b6b;
+    box-shadow: 0 0 25px rgba(255, 107, 107, 0.6);
+}
+
+/* Floating Rocket Animation */
+.video-section::before {
+    content: "🚀";
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    font-size: 2rem;
+    animation: rocketFly 5s infinite linear;
+}
+
+@keyframes rocketFly {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Floating Alien for Fun */
+.video-section::after {
+    content: "👾";
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+    font-size: 2rem;
+    animation: alienFloat 3s infinite alternate;
+}
+
+@keyframes alienFloat {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(10px); }
+}

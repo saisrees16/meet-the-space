@@ -82,7 +82,7 @@ const KidsSpaceExplorer = () => {
                             <span className="title">Space Adventure</span>
                             <div>
                                 <strong>Explore the Galaxy!</strong>
-                                <p>Discover planets&missions!</p>
+                                <p>Discover planets & missions!</p>
                                 <button>P L A Y</button>
                             </div>
                         </div>
@@ -100,6 +100,13 @@ const KidsSpaceExplorer = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* See All Button */}
+                <div className="see-all-container">
+                    <button className="see-all-button" onClick={() => handleGameRedirect('/Games')}>
+                        See All Games →
+                    </button>
+                </div>
             </section>
 
 
@@ -110,7 +117,7 @@ const KidsSpaceExplorer = () => {
                         <div className="video-header">
                             <h2>Learn about Space</h2>
                             <button className="view-all"
-                                    onClick={() => window.location.href = "/meet-the-space/construction"}>View All
+                                    onClick={() => window.location.href = "/meet-the-space/Youtube"}>View All
                             </button>
                         </div>
                         <div className="video-scroll" ref={scrollRef}>

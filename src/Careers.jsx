@@ -1,6 +1,5 @@
 import React from "react";
 import "./Careers.css";
-import Road from "./Road";
 import Paths from "./Paths";
 import mit from './assets/massachuessts.jpg';
 import caltech from './assets/caltech.jpg';
@@ -84,7 +83,6 @@ const Careers = () => {
                 </div>
             </section>
 
-            <Road/>
             <section className="courses-section">
                 <div className="courses-header">
                     <h2 className="courses-title">Recommended Courses</h2>

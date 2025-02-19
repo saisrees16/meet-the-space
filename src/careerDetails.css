@@ -1,0 +1,240 @@
+.page-containerl{
+    display: flex;
+    min-height: 100vh;
+    padding: 80px 0 0 0;
+    background-color: black;
+}
+
+.sidebarl {
+    width: 260px;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    position: fixed;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.sidebarl h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.career-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.career-item {
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.career-item:hover {
+    background-color: #e8f0fe;
+}
+
+.career-item.active {
+    background-color: #e8f0fe;
+    font-weight: 500;
+}
+
+.career-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-contentl {
+    flex: 1;
+    padding: 32px;
+    margin-left: 260px;
+}
+
+.cardl {
+    background-color: white;
+    border-radius: 8px;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    padding: 24px;
+}
+
+.cardl h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.company-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.company-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.company-card .location {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.company-card p {
+    color: #555;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.positions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.skill-tag {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.view-jobs-button {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.view-jobs-button:hover {
+    background-color: #1557b0;
+}
+
+.resources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+.resources-list li {
+    margin-bottom: 12px;
+}
+
+.resources-list a {
+    color: #1a73e8;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
+}
+
+.resources-list a:hover {
+    color: #1557b0;
+    text-decoration: underline;
+}
+
+.training-list {
+    list-style: disc;
+    padding-left: 24px;
+    margin: 0;
+    color: #555;
+}
+
+.training-list li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 180px);
+    color: white;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.icon-large {
+    width: 24px;
+    height: 24px;
+}
+
+/* Career-specific icon colors */
+.icon-astronaut { color: #1a73e8; }
+.icon-engineer { color: #666; }
+.icon-physicist { color: #9334ea; }
+.icon-satellite { color: #16a34a; }
+.icon-robotics { color: #dc2626; }
+.icon-lawyer { color: #eab308; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        padding: 24px;
+    }
+
+    .companies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-container {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 16px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 16px;
+    }
+}
