@@ -2,6 +2,14 @@ import React from "react";
 import "./Careers.css";
 import Road from "./Road";
 import Paths from "./Paths";
+import mit from './assets/massachuessts.jpg';
+import caltech from './assets/caltech.jpg';
+import iist from './assets/iist.webp';
+import nus from './assets/nus.jpg';
+import cam from './assets/cam.webp';
+import mitocw from './assets/mitocw.jpg';
+import cou from './assets/coursera.png';
+import edx from './assets/edx.jpg';
 
 const Section = ({ title, children }) => (
     <section className="section">
@@ -12,35 +20,35 @@ const Section = ({ title, children }) => (
 const colleges = [
     {
         name: "Massachusetts Institute of Technology (MIT) - USA",
-        image: "https://placehold.co/600x400",
+        image: mit,
         link: "https://web.mit.edu/",
         registration: "September - January",
         fees: "$53,000/year",
     },
     {
         name: "California Institute of Technology (Caltech) - USA",
-        image: "https://placehold.co/600x400",
+        image: caltech,
         link: "https://www.caltech.edu/",
         registration: "October - January",
         fees: "$56,000/year",
     },
     {
         name: "Indian Institute of Space Science and Technology (IIST) - India",
-        image: "https://placehold.co/600x400",
+        image: iist,
         link: "https://www.iist.ac.in/",
         registration: "April - June",
         fees: "$2,000/year",
     },
     {
         name: "National University of Singapore (NUS) - Singapore",
-        image: "https://placehold.co/600x400",
+        image: nus,
         link: "https://www.nus.edu.sg/",
         registration: "January - March",
         fees: "$40,000/year",
     },
     {
         name: "University of Cambridge - UK",
-        image: "https://placehold.co/600x400",
+        image: cam,
         link: "https://www.cam.ac.uk/",
         registration: "September - December",
         fees: "$45,000/year",
@@ -53,14 +61,6 @@ const Careers = () => {
     return (
         <div className="careers-container">
             <h1 className="titley">Careers in Space :Your Ultimate Guide</h1>
-            <section className="bannery">
-                <p>
-                    We sincerely appreciate your time in visiting our new page.
-                    To learn more about the career opportunities we offer, explore here:
-                    <a href="#" className="highlight-link"> Checkout</a>
-                </p>
-            </section>
-
             <section title="📚 Career Paths">
                 <Paths/>
             </section>
@@ -95,17 +95,17 @@ const Careers = () => {
                         {
                             name: "MIT OpenCourseWare - Aerospace Engineering",
                             url: "https://ocw.mit.edu/courses/aeronautics-and-astronautics/",
-                            image: "https://placehold.co/300x180"
+                            image: mitocw
                         },
                         {
                             name: "Coursera - Space Science & Technology",
                             url: "https://www.coursera.org/courses?query=space%20science",
-                            image: "https://placehold.co/300x180"
+                            image: cou
                         },
                         {
                             name: "edX - Astronomy & Space Exploration",
                             url: "https://www.edx.org/course/astronomy-exploring-time-and-space",
-                            image: "https://placehold.co/300x180"
+                            image: edx
                         },
                     ].map((course, index) => (
                         <a href={course.url} key={index} target="_blank" rel="noopener noreferrer"
