@@ -20,6 +20,8 @@ import Games from "./Games.jsx";
 import Videos from "./Videos.jsx";
 import CareerDetails from "./CareerDetails.jsx";
 import Chatbot from "./ChatBot.jsx";
+import Allcolleges from "./Allcolleges.jsx";
+import Allcourses from "./Allcourses.jsx";
 
 function Layout() {
     const location = useLocation(); // Now correctly inside Router
@@ -58,6 +60,8 @@ function Layout() {
                 <Route path="/Games" element={<Games />} />
                 <Route path="/Youtube" element={<Videos />} />
                 <Route path="/Options" element={<CareerDetails />} />
+                <Route path="/Allcolleges" element={<Allcolleges />} />
+                <Route path="/Allcourses" element={<Allcourses />} />
             </Routes>
             {/* Conditionally render Footer */}
             {!hideFooterRoutes.includes(location.pathname) && <Footer />}
