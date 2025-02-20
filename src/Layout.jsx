@@ -19,6 +19,7 @@ import Quiz from "./Quiz.jsx";
 import Games from "./Games.jsx";
 import Videos from "./Videos.jsx";
 import CareerDetails from "./CareerDetails.jsx";
+import Chatbot from "./ChatBot.jsx";
 
 function Layout() {
     const location = useLocation(); // Now correctly inside Router
@@ -58,7 +59,6 @@ function Layout() {
                 <Route path="/Youtube" element={<Videos />} />
                 <Route path="/Options" element={<CareerDetails />} />
             </Routes>
-
             {/* Conditionally render Footer */}
             {!hideFooterRoutes.includes(location.pathname) && <Footer />}
         </>

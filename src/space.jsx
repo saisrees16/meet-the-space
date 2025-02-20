@@ -11,15 +11,7 @@ const Space = () => {
     const [jobs, setJobs] = useState([]);
     const [books, setBooks] = useState([]);
 
-    useEffect(() => {
-        fetch(`https://api.nasa.gov/neo/rest/v1/neo/3542519?api_key=a5a062XhtScV4vrtTDhcyOEiXvImWW7TiateyCxs`)
-            .then(response => response.json())
-            .then(data => {
-                console.log("API Response:", data);  // Check the structure
-                setNews(data);  // Store the full object
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    }, [selectedOrg]);
+
 
 
     useEffect(() => {
