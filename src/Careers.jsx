@@ -80,7 +80,7 @@ const Careers = () => {
                     ))}
                 </div>
                 <div className="see-all-container">
-                    <a href="/meet-the-space/Allcolleges" className="see-all-btn">See All</a>
+                    <a href="src/Allcolleges.jsx" className="see-all-btn">See All</a>
                 </div>
             </section>
 
