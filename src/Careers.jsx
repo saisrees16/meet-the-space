@@ -80,14 +80,14 @@ const Careers = () => {
                     ))}
                 </div>
                 <div className="see-all-container">
-                    <a href="src/Allcolleges.jsx" className="see-all-btn">See All</a>
+                    <a href="Allcolleges.jsx" className="see-all-btn">See All</a>
                 </div>
             </section>
 
             <section className="courses-section">
                 <div className="courses-header">
                     <h2 className="courses-title">Recommended Courses</h2>
-                    <button className="see-all-btn" onClick={() => window.location.href = "/meet-the-space/Allcourses"}>See All</button>
+                    <button className="see-all-btn" onClick={() => window.location.href = "Allcourses"}>See All</button>
                 </div>
                 <div className="courses-grid">
                     {[
